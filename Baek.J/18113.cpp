@@ -26,15 +26,15 @@ int count(int p) {
 void BS(int l, int r) {
 	int mid = (l + r) / 2; // 김밥조각의 길이(P)
 
-	if (r > l) { // 중간값(김밥의 길이 P)를 찾거나 없다면 BS 탈출
+	if (l > r) { // 중간값(김밥의 길이 P)를 찾거나 없다면 BS 탈출
 		return;
 	}
 	if (count(mid) >= m) { // 최소개수 이상 김밥을 mid센치로 잘랐다는걸 count함수로 확인했다면
 		p = max(p, mid);
-		BS(mid + 1, l); // 최대 길이를 찾아야하기 때문에 mid보다 긴 길이로 이분탐색
+		BS(mid + 1, r); // 최대 길이를 찾아야하기 때문에 mid보다 긴 길이로 이분탐색
 	}
 	else {
-		BS(r, mid - 1); // 김밥이 안잘렸으므로 mid보다 작은 길이로 이분탐색
+		BS(l, mid - 1); // 김밥이 안잘렸으므로 mid보다 작은 길이로 이분탐색
 	}
 
 }
