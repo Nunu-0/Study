@@ -23,7 +23,7 @@ int count(int p) {
 	return cnt;
 }
 
-void BS(int r, int l) {
+void BS(int l, int r) {
 	int mid = (l + r) / 2; // 김밥조각의 길이(P)
 
 	if (r > l) { // 중간값(김밥의 길이 P)를 찾거나 없다면 BS 탈출
