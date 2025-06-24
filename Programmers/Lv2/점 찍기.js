@@ -1,5 +1,5 @@
 /**
- [1차]다트 게임 (22.07.12)
+ 점 찍기 (25.06.24)
  https://school.programmers.co.kr/learn/courses/30/lessons/140107
  시간 복잡도 문제 O(n^2) -> O(n) 
  *  */
